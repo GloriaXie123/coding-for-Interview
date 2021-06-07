@@ -23,3 +23,8 @@ while (lower <= upper)
   ...
 }
 ```
+you can ignore the braces if just one statement inside the while loop:
+```
+while (lower <= upper)
+  lower = lower + step;
+```
