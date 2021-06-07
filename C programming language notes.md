@@ -44,4 +44,10 @@ for(fah = 300.0;fah >= 0.0;fah = fah - 20.0){
     printf("%3.0f\t%6.1f\n",fah,5.0 * (fah - 32.0) /9.0);
 }
 ```
+#### symbolic constants
+it's bad practice to bury "magic number" in a program,because they convey little infomation to someone who might have to read the program later and they are hard to change in systematic way and one way to deal with it is to replace them with symbolic constants.
+```
+#define LOWER 0
+#define UPPER 300
+
 
