@@ -18,7 +18,7 @@ while loop is executed until the condition inside the brace is unsatisfied: <br>
 ```
 while (lower <= upper)
 {
-  /*the block inside the while loop is usually indented to make it clear to check the code*/
+  /*the statements inside the while loop is usually indented to emphasize the logic structure of the program*/
   lower = lower + step;
   ...
 }
