@@ -5,7 +5,7 @@ well,all i need is vim in Visual Studio code as Editor and gcc,it's easily to se
 *blog post about vim operations: https://www.barbarianmeetscoding.com/blog/boost-your-coding-fu-with-vscode-and-vim#fn-latest-vscode*
 ## Chapter 1<br>
 ### 1.1 Getting Started<br>
-#### compile code and run executables
-*compile code*: `cc helloworld.c`
-*run executable*: `./a.out`
+#### compile code and run executables<br>
+*compile code*: `cc helloworld.c`<br>
+*run executable*: `./a.out`<br>
 
