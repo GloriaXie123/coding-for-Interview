@@ -8,4 +8,5 @@ well,all i need is vim in Visual Studio code as Editor and gcc,it's easily to se
 #### compile code and run executables<br>
 *compile code*: `cc helloworld.c`<br>
 *run executable*: `./a.out`<br>
+#### variables and arithmatic expressions<br>
 
