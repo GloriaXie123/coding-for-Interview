@@ -37,3 +37,11 @@ printf("%3.0f\t%6.1f",fah,celsius)
 ```
 #### for loop
 the for loop is usually appropriate for loops in which the initialization and increment are single statement and logically related.
+```
+    float fah;
+
+    for(fah = 300.0;fah >= 0.0;fah = fah - 20.0){
+        printf("%3.0f\t%6.1f\n",fah,5.0 * (fah - 32.0) /9.0);
+    }
+```
+
