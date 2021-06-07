@@ -13,5 +13,13 @@ well,all i need is vim in Visual Studio Code as Editor and gcc,it's easily to se
 `/*this is a comment*/`
 ##### declaration<br>
 consist of type names and a list of variables:`int lower, upper, step;`
-
-
+##### loop
+while loop is executed until the condition inside the brace is unsatisfied: <br>
+```
+while (lower <= upper)
+{
+  /*the block inside the while loop is usually indented to make it clear to check the code*/
+  lower = lower + step;
+  ...
+}
+```
