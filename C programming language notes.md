@@ -28,3 +28,10 @@ you can ignore the braces if just one statement inside the while loop:
 while (lower <= upper)
   lower = lower + step;
 ```
+##### format printing
+format the output:<br>
+```
+/*the fah is to be at least 3 characters wide and has no characters after the decimal point,celsius follows the same routine*/
+printf("%3.0f\t%6.1f",fah,celsius)
+
+```
