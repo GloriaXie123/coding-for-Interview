@@ -33,7 +33,6 @@ format the output:<br>
 ```
 /*the fah is to be at least 3 characters wide and has no characters after the decimal point,celsius follows the same routine*/
 printf("%3.0f\t%6.1f",fah,celsius)
-
 ```
 ### 1.3 for loop
 the for loop is usually appropriate for loops in which the initialization and increment are single statement and logically related.
