@@ -60,6 +60,7 @@ the following for loop has a null statement representing by a single semicolon:
 for(nc = 0;getchar() != EOF;++nc)
   ;
 ```
-the above code ensure the *boundary condition* ,for example,the input is empty,getchar() fails,works also correctly,which is very important for a funtional complete program.<br>
-#### 
+the above code ensure the **boundary condition** ,for example,the input is empty,getchar() fails,works also correctly,which is very important for a funtional complete program.<br>
+#### line counting
+the character written in **single quotes** represents an integer value  equals to the numerical value of the character in the machine's character set.
 
