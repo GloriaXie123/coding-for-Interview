@@ -52,7 +52,14 @@ it's bad practice to bury "magic number" in a program,because they convey little
 ```
 ### 1.5 character input and output<br>
 #### character counting<br>
-++nc means increment by one,which is more concise and efficient by writting nc = nc + 1:`++nc`
-the formatted output of long integer: `%ld`
+++nc means increment by one,which is more concise and efficient than writting nc = nc + 1:`++nc`<br>
+the formatted output of long integer: `%ld`<br>
+
+the following for loop has a null statement representing by a single semicolon:
+```
+for(nc = 0;getchar() != EOF;++nc)
+  ;
+```
+the above code ensure the *boundary condition* ,for example,the input is empty,getchar() fails,works also correctly,which is very important for a funtional complete program.<br>
 #### 
 
