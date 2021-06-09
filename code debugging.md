@@ -9,3 +9,12 @@
     sudo apt-get update
     sudo apt-get install build-essential gdb
     ```
+- create a dir as workspace in vscode,execute the follwing command from your command line terminal:
+  ```
+  mkdir projects
+  cd projects
+  mkdir HelloWorld
+  cd HelloWorld
+  code .
+  ```
+  *code .*opens vs code in the current folder,you can make file name helloworld.c in the current folder or current workspace.
