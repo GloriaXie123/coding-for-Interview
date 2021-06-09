@@ -19,7 +19,8 @@
   ```
   *code*. opens vs code in the current folder,you can create a file named helloworld.c in the current folder or current workspace.
 - compile source code:helloworld.c
-  from the main menu of vs code,choose **Terminal -> Configure Default Build Task**，then run CTRL+SHIFT+B,the program will begin to complie.if you want to choose specific build task,you can choose **Terminal -> Run Build Task**,also the program will compile.
+  from the main menu of vs code,choose **Terminal -> Configure Default Build Task**，from the drop down list choose **gcc build active file**,then run CTRL+SHIFT+B,the program will begin to complie.if you want to choose specific build task,you can choose **Terminal -> Run Build Task**,also the program will compile.
 - run the executable program
   after the program is compiled sucessfully,a binary file named 'helloworld' will generate,then type  `./helloworld`,the program will be running.
-  
+- debug program
+  from the main menu of vs code,choose **Run -> Add Configuration**,then choose **C++(GDB/LLDB)**,from the drop down list,choose **gcc bulid and debug active file**.
