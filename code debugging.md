@@ -9,7 +9,7 @@
     sudo apt-get update
     sudo apt-get install build-essential gdb
     ```
-- create a dir as workspace in vscode,execute the follwing command from your command line terminal:
+- create a dir as workspace in vscode,execute the following command from your command line terminal:
   ```
   mkdir projects
   cd projects
