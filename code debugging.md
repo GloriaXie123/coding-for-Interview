@@ -17,4 +17,6 @@
   cd HelloWorld
   code .
   ```
-  *code .*opens vs code in the current folder,you can make file name helloworld.c in the current folder or current workspace.
+  *code*. opens vs code in the current folder,you can create a file named helloworld.c in the current folder or current workspace.
+- compile source code:helloworld.c
+  from the main menu of vs code,choos **Terminal -> Configure Default Build Task**
