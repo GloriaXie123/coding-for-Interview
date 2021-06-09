@@ -19,4 +19,4 @@
   ```
   *code*. opens vs code in the current folder,you can create a file named helloworld.c in the current folder or current workspace.
 - compile source code:helloworld.c
-  from the main menu of vs code,choose **Terminal -> Configure Default Build Task**
+  from the main menu of vs code,choose **Terminal -> Configure Default Build Task**，then run CTRL+SHIFT+B,the program will begin to complie.if you want to choose specific build task,you can choose **Terminal -> Run Build Task**,also the program will compile.
