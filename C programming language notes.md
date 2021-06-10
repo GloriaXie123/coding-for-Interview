@@ -79,4 +79,4 @@ if-else clause execute statements1 if condition1 is true ,if the condition1 is f
 for example,declare ndigits to be an array of 10 integers:
 `int ndigits[10];`
 #### the value of '0'
-'getchar()' will return a char type value,'0'...'9',represent the numerical value of character '0'...'9'.since in all the char sets,from '0' to '9' the corresponding  int value is consecutively  increased, so we can use the c - '0' represent the numerical value of '0'...'9',which is a valid subscript of array ndigits.
+'getchar()' will return a char type value,'0'...'9',represent the numerical value of character '0'...'9'.since in all the char sets,from '0' to '9' the corresponding  int value is consecutively  increased, so we can use the c - '0' represents numerical value of '0'...'9',which is a valid subscript of array ndigits.
