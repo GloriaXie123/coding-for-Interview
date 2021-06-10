@@ -74,3 +74,7 @@ else
   statements2;
 ```
 if-else clause execute statements1 if condition1 is true ,if the condition1 is false,it will execute statements2.
+### 1.6 Arrays
+#### declare an array
+for example,declare ndigits to be an array of 10 integers:
+`int ndigits[10];`
