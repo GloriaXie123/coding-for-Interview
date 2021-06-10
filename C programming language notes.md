@@ -66,4 +66,11 @@ the character written in **single quotes** represents an integer value  equals t
 the magic of **status or flag** can describe whether the program in a word or not.the initial status of status is not in a word.by **using symbolic constants to replace magic number**,you can make extensive changes easily in bigger programs.<br>
 ##### assignment
 `nl = nc = nw = 0` sets all three variables to zero.
-
+##### if-else clause
+```
+if(condition1)
+  statements1;
+ else
+  statements2;
+```
+if-else clause execute statements1 if condition1 is true ,if the condition1 is false,it will execute statements2.
