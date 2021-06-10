@@ -62,4 +62,8 @@ for(nc = 0;getchar() != EOF;++nc)
 the above code ensure the **boundary condition** ,for example,the input is empty,getchar() fails,works also correctly,which is very important for a funtional complete program.<br>
 #### line counting
 the character written in **single quotes** represents an integer value  equals to the numerical value of the character in the machine's character set.
+#### word counting
+the magic of **status or flag** can describe whether the program in a word or not.the initial status of status is not in a word.by **using symbolic constants to replace magic number**,you can make extensive changes easily in bigger programs.<br>
+##### assignment
+`nl = nc = nw = 0` sets all three variables to zero.
 
