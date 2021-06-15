@@ -76,6 +76,8 @@ else
   statements2;
 ```
 if-else clause execute statements1 if condition1 is true ,if the condition1 is false,it will execute statements2.
+#### program testing
+test cases:invalid input,valid input and boundary conditions.
 ### 1.6 Arrays
 #### declare an array
 for example,declare ndigits to be an array of 10 integers:
