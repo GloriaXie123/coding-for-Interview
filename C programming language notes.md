@@ -78,6 +78,9 @@ else
 if-else clause execute statements1 if condition1 is true ,if the condition1 is false,it will execute statements2.
 #### program testing
 test cases:invalid input,valid input and boundary conditions.
+#### get input from stdin on linux
+By default, linux terminal will buffer all information until Enter is pressed, before even sending it to the C program.
+
 ### 1.6 Arrays
 #### declare an array
 for example,declare ndigits to be an array of 10 integers:
