@@ -50,6 +50,8 @@ it's bad practice to bury "magic number" in a program,because they convey little
 #define UPPER 300
 ```
 ### 1.5 character input and output<br>
+#### how to input EOF on linux<br>
+press **ENTER** ,then press **Ctrl + D**
 #### character counting<br>
 ++nc means increment by one,which is more concise and efficient than writting nc = nc + 1:`++nc`<br>
 the formatted output of long integer: `%ld`<br>
@@ -62,4 +64,26 @@ for(nc = 0;getchar() != EOF;++nc)
 the above code ensure the **boundary condition** ,for example,the input is empty,getchar() fails,works also correctly,which is very important for a funtional complete program.<br>
 #### line counting
 the character written in **single quotes** represents an integer value  equals to the numerical value of the character in the machine's character set.
+#### word counting
+the magic of **status or flag** can describe whether the program in a word or not.the initial status of status is not in a word.by **using symbolic constants to replace magic number**,you can make extensive changes easily in bigger programs.<br>
+##### assignment
+`nl = nc = nw = 0` sets all three variables to zero.
+##### if-else clause
+```
+if(condition1)
+  statements1;
+else
+  statements2;
+```
+if-else clause execute statements1 if condition1 is true ,if the condition1 is false,it will execute statements2.
+#### program testing
+test cases:invalid input,valid input and boundary conditions.
+#### get input from stdin on linux
+By default, linux terminal will buffer all information until Enter is pressed, before even sending it to the C program.
 
+### 1.6 Arrays
+#### declare an array
+for example,declare ndigits to be an array of 10 integers:
+`int ndigits[10];`
+#### the value of '0'
+'getchar()' will return a char type value,'0'...'9',represent the numerical value of character '0'...'9'.since in all the char sets,from '0' to '9' the corresponding  int value is consecutively  increased, so we can use the c - '0' represents numerical value of '0'...'9',which is a valid subscript of array ndigits.

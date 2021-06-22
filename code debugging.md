@@ -23,4 +23,4 @@
 - run the executable program
   after the program is compiled sucessfully,a binary file named 'helloworld' will generate,then type  `./helloworld`,the program will be running.
 - debug program
-  from the main menu of vs code,choose **Run -> Add Configuration**,then choose **C++(GDB/LLDB)**,from the drop down list,choose **gcc bulid and debug active file**.
+  from the main menu of vs code,choose **Run -> Add Configuration**,then choose **C++(GDB/LLDB)**,from the drop down list,choose **gcc bulid and debug active file**,then select helloworld.c file and press F5 to start debug.
