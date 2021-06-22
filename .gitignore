@@ -4,3 +4,4 @@ projects/C/.vscode/*
 !.vscode/launch.json
 !.vscode/extensions.json
 *.code-workspace
+projects/C/output/*
