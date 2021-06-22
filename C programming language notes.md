@@ -86,4 +86,4 @@ By default, linux terminal will buffer all information until Enter is pressed, b
 for example,declare ndigits to be an array of 10 integers:
 `int ndigits[10];`
 #### the value of '0'
-'getchar()' will return a char type value,'0'...'9',represent the numerical value of character '0'...'9'.since in all the char sets,from '0' to '9' the corresponding  int value is consecutively  increased, so we can use the c - '0' represents numerical value of '0'...'9',which is a valid subscript of array ndigits.
+'getchar()' will return integer value of char type,'0'...'9',represent the numerical value of character '0'...'9'.since in all the char sets,from '0' to '9' the corresponding  int value is consecutively  increased, so we can use the c - '0' represents numerical value of '0'...'9',which is a valid subscript of array ndigits.
