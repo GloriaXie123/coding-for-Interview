@@ -9,13 +9,14 @@ main()
     nt = 0;
     ns = 0;
 
-    while ((c = getchar()) != EOF){
-        if(c == '\n')
+    while ((c = getchar()) != EOF)
+    {
+        if (c == '\n')
             ++nl;
-        if(c == '\t')
+        if (c == '\t')
             ++nt;
-        if(c == ' ')
+        if (c == ' ')
             ++ns;
     }
-    printf("the lines are :%d，the tabs are:%d,the spaces are %d",nl,nt,ns);
+    printf("the lines are :%d，the tabs are:%d,the spaces are %d", nl, nt, ns);
 }

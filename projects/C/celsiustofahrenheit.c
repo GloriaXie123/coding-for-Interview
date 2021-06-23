@@ -11,11 +11,12 @@ main()
     upper = 300.0;
     step = 20.0;
 
-    celsius =lower;
+    celsius = lower;
     printf("convert celsius to fahrenheit\n");
-    while (celsius <= upper){
+    while (celsius <= upper)
+    {
         fah = celsius * 9.0 / 5.0 + 32.0;
-        printf("%3.0f\t%6.1f\n",celsius,fah);
+        printf("%3.0f\t%6.1f\n", celsius, fah);
         celsius = celsius + step;
     }
 }

@@ -5,5 +5,5 @@ main()
 {
     double nc;
 
-    printf("%.0f\n",nc);
+    printf("%.0f\n", nc);
 }

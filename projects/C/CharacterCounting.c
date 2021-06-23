@@ -6,8 +6,9 @@ main()
     long num;
 
     num = 0;
-    while (getchar() != EOF){
+    while (getchar() != EOF)
+    {
         ++num;
-        printf("%ld\n",num);
+        printf("%ld\n", num);
     }
 }

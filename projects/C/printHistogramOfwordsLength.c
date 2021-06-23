@@ -8,13 +8,14 @@
 
 main()
 {
-	int c, nw, nc ,status;
+	int c, nw, nc, status;
 	int word[MAXWN];
 
 	nc = nw = 0;
 	status = OUT;
 
-	for(int i = 0;i < MAXWN; i++){
+	for (int i = 0; i < MAXWN; i++)
+	{
 		word[i] = 0;
 	}
 
@@ -37,22 +38,25 @@ main()
 	// 	}
 	// }
 
-	while((c = getchar()) != EOF && nw < MAXWN)
+	while ((c = getchar()) != EOF && nw < MAXWN)
 	{
-		if(c == ' ' || c == '\t' || c == '\n'){
-			if (word[nw] > 0){
+		if (c == ' ' || c == '\t' || c == '\n')
+		{
+			if (word[nw] > 0)
+			{
 				nw++;
 			}
 			continue;
 		}
 		word[nw]++;
-		
 	}
 
-	for(int i = 0; i < MAXWN; i++){
-		for(int j = 0; j < MAXWL && j < word[i]; j++){
+	for (int i = 0; i < MAXWN; i++)
+	{
+		for (int j = 0; j < MAXWL && j < word[i]; j++)
+		{
 			putchar('*');
-		} 
+		}
 		putchar('\n');
 	}
 }

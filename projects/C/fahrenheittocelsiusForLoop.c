@@ -7,7 +7,8 @@ main()
 {
     float fah;
 
-    for(fah = 300.0;fah >= 0.0;fah = fah - 20.0){
-        printf("%3.0f\t%6.1f\n",fah,5.0 * (fah - 32.0) /9.0);
+    for (fah = 300.0; fah >= 0.0; fah = fah - 20.0)
+    {
+        printf("%3.0f\t%6.1f\n", fah, 5.0 * (fah - 32.0) / 9.0);
     }
 }
