@@ -98,6 +98,15 @@ declarations
 statements
 }
 ```
+#### return
+return need not to return a value,a return statement with no expression **causes control to be returned to the caller**,and caller will ignore the value returned by the function.<br>
+main is also a function that will return value to its caller which is in effect the environment in which the program executes.a return value *zero* implies normal termination,*non-zeros* signal errorneous termination.
+
+### 1.8 Arguments-Call by Value
+#### pass by value
+all the function arguments are passed by value.the called function **is given the value of the arguments in temporary variables** instead of the originals.
+call by value is an asset,which leads to more compact programs.because **parameters can be treated as conveniently initialized local parameters**.
+if you want a function to change the variable in a calling routine.**the caller must provide the address of the variable(typically a pointer to the variable) to be set**.
 
 
 
