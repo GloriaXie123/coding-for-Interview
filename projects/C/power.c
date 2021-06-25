@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+int power(int base, int n);
 /*implement function power(m,n)*/
 main()
 {
