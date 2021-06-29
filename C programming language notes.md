@@ -108,7 +108,8 @@ a return value *zero* implies normal termination,*non-zeros* signal errorneous t
 #### pass by value
 all the function arguments are passed by value.<br>
 the called function **is given the value of the arguments in temporary variables** instead of the originals.
-call by value is an asset,which leads to more compact programs.because **parameters can be treated as conveniently initialized local parameters**.
+Call by value is an asset,which leads to more compact programs.
+Because **parameters can be treated as conveniently initialized local parameters**.
 If you want a function to change the variable in a calling routine.
 **The caller must provide the address of the variable(typically a pointer to the variable) to be set**.
 
