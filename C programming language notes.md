@@ -111,7 +111,6 @@ the called function **is given the value of the arguments in temporary variables
 call by value is an asset,which leads to more compact programs.because **parameters can be treated as conveniently initialized local parameters**.
 if you want a function to change the variable in a calling routine.**the caller must provide the address of the variable(typically a pointer to the variable) to be set**.
 
-
 ### 1.9 Character Arrays
 #### '\0'
 in C language,'\0' (null character,whose value is 0)is the signal of the end of the string of characters.
