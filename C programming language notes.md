@@ -100,7 +100,8 @@ statements
 ```
 very important to know is that,**you should declare a function before using it**.
 #### return
-return need not to return a value,a return statement with no expression **causes control to be returned to the caller**,and caller will ignore the value returned by the function.<br>
+Return need not to return a value, a return statement with no expression **causes control to be returned to the caller**,
+and caller will ignore the value returned by the function.<br>
 main is also a function that will return value to its caller which is in effect the environment in which the program executes.<br>
 a return value *zero* implies normal termination,*non-zeros* signal errorneous termination.
 
