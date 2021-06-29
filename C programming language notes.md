@@ -125,4 +125,3 @@ local variables come into existence only when the function is called and disappe
 it's also possible to define variables that is external to all functions,which can be accessed by name by any function.<br>
 the external variable must be declared once outside of the function,this set storage for it.
 
-
