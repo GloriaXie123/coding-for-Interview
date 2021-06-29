@@ -98,6 +98,31 @@ declarations
 statements
 }
 ```
+very important to know is that,**you should declare a function before using it**.
+#### return
+Return need not to return a value, a return statement with no expression **causes control to be returned to the caller**,
+and caller will ignore the value returned by the function.<br>
+main is also a function that will return value to its caller which is in effect the environment in which the program executes.<br>
+a return value *zero* implies normal termination,*non-zeros* signal errorneous termination.
 
+### 1.8 Arguments-Call by Value
+#### pass by value
+all the function arguments are passed by value.<br>
+the called function **is given the value of the arguments in temporary variables** instead of the originals.
+Call by value is an asset,which leads to more compact programs.
+Because **parameters can be treated as conveniently initialized local parameters**.
+If you want a function to change the variable in a calling routine.
+**The caller must provide the address of the variable(typically a pointer to the variable) to be set**.
 
+### 1.9 Character Arrays
+#### '\0'
+in C language,'\0' (null character,whose value is 0)is the signal of the end of the string of characters.
 
+### 1.10 external variables
+#### local or automatic variables
+variables that are defined in a function is called local variables, no othter functions can have access to it.<br>
+local variables come into existence only when the function is called and disappear when the function is exited.
+
+#### external variables
+it's also possible to define variables that is external to all functions,which can be accessed by name by any function.<br>
+the external variable must be declared once outside of the function,this set storage for it.

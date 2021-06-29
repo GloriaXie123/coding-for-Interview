@@ -5,3 +5,4 @@ projects/C/.vscode/*
 !.vscode/extensions.json
 *.code-workspace
 projects/C/output/*
+.vscode/*

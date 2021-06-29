@@ -1,9 +1,11 @@
 #include <stdio.h>
-int power(int base, int n);
-/*implement function power(m,n)*/
+
+/* power function,refactor:call by value
+input:power(2,3)
+outupt:8 */
+
 main()
 {
-	int i;
 	for (int i = 0; i < 10; ++i)
 	{
 		printf("%d,%d,%d\n", i, power(2, i), power(-3, i));
@@ -12,10 +14,8 @@ main()
 }
 int power(int base, int n)
 {
-	int i, p;
-	p = 1;
-
-	for (int i = 1; i <= n; ++i)
+	int p;
+	for (p = 1; n > 0; --n)
 	{
 		p = p * base;
 	}
