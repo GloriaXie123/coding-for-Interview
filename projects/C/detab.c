@@ -1,6 +1,6 @@
 #include <stdio.h>
 /*write a program detab that replaces tabs in the input with proper number of blanks
-to space to the next tab stop.Assumed a fixed set of tab stops,say every n columns,should
+to space to the next tab stop. Assumed a fixed set of tab stops,say every n columns, should
 n be a variable or symbolic parameter*/
 #define TABINC 16 //tab increment
 main()
