@@ -110,6 +110,8 @@ all the function arguments are passed by value.<br>
 the called function **is given the value of the arguments in temporary variables** instead of the originals.
 call by value is an asset,which leads to more compact programs.because **parameters can be treated as conveniently initialized local parameters**.
 if you want a function to change the variable in a calling routine.**the caller must provide the address of the variable(typically a pointer to the variable) to be set**.
+the story is different for arrays,when the name of an array is used as an argument,<br>
+the value passed to the function is the location or address of the beginning of the array.
 
 ### 1.9 Character Arrays
 #### '\0'
