@@ -107,12 +107,13 @@ a return value *zero* implies normal termination,*non-zeros* signal errorneous t
 
 ### 1.8 Arguments-Call by Value
 #### pass by value
-all the function arguments are passed by value.<br>
-the called function **is given the value of the arguments in temporary variables** instead of the originals.
-all by value is an asset,which leads to more compact programs.
-Because **parameters can be treated as conveniently initialized local parameters**.
+All the function arguments are passed by value.<br>
+The called function **is given the value of the arguments in temporary variables** instead of the originals.<br>
+All by value is an asset,which leads to more compact programs.
+Because **parameters can be treated as conveniently initialized local parameters**.<br>
 If you want a function to change the variable in a calling routine.
-**The caller must provide the address of the variable(typically a pointer to the variable) to be set**.
+**The caller must provide the address of the variable(typically a pointer to the variable) to be set**.<br>
+The story is different for arrays,when the name of an array is used as an argument,the value passed to the function is the location or address of the beginning of the array.
 
 ### 1.9 Character Arrays
 #### '\0'
