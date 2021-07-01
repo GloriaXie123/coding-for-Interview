@@ -35,20 +35,21 @@ int getlines(char line[], int maxline)
 {
 	int c, i, j;
 	j = 0;
-	for (i = 0; (c = getchar()) != EOF && c != '\n'; ++i)
+	for (i = 0; (c = getchar()) != EOF; ++i)
 	{
-		if (i < maxline - 2)
+		if (i < maxline - 1)
 		{
 			line[j] = c;
 			++j;
 		}
+
+		if (c == '\n')
+		{
+			++i;
+			break;
+		}
 	}
-	if (c == '\n')
-	{
-		line[j] = c;
-		++i;
-		++j;
-	}
+
 	line[j] = '\0';
 	return i;
 }
