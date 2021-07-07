@@ -9,23 +9,23 @@ int getlines(char line[], int maxline);
 void copy(char max[], char line[]);
 main()
 {
-	int linelen, maxlinelen;
+	int len, maxlen;
 	char line[MAXLENGTH], max[MAXLENGTH];
 
-	maxlinelen = 0;
-	while ((linelen = getlines(line, MAXLENGTH)) > 0)
+	maxlen = 0;
+	while ((len = getlines(line, MAXLENGTH)) > 0)
 	{
-		printf("%d, %s", linelen, line);
-		if (linelen > maxlinelen)
+		printf("%d, %s", len, line);
+		if (len > maxlen)
 		{
-			maxlinelen = linelen;
+			maxlen = len;
 			copy(max, line);
 		}
 	}
 
-	if (maxlinelen > 0)
+	if (maxlen > 0)
 	{
-		printf("%d,%s", maxlinelen, max);
+		printf("%d,%s", maxlen, max);
 	}
 
 	return 0;

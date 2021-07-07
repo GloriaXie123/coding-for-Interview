@@ -127,3 +127,11 @@ local variables come into existence only when the function is called and disappe
 #### external variables
 it's also possible to define variables that is external to all functions,which can be accessed by name by any function.<br>
 the external variable must be declared once outside of the function,this set storage for it.
+
+## Chapter 5 Pointers and Arrays
+
+A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
+
+### pointers and address
+
+
