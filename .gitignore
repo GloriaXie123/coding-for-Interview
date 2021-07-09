@@ -6,3 +6,4 @@ projects/C/.vscode/*
 *.code-workspace
 projects/C/output/*
 .vscode/*
+projects/leetcode/output/*

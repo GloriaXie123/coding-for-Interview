@@ -128,6 +128,85 @@ local variables come into existence only when the function is called and disappe
 it's also possible to define variables that is external to all functions,which can be accessed by name by any function.<br>
 the external variable must be declared once outside of the function,this set storage for it.
 
+## Chapter 2 Types, Operations and Expressions
+### Variable Names
+Names are made up of letters and digits. the first character must be a letter.
+
+even though underscore "_" counts as a letter,but don't begin variable name with underscore "_",since library routines often use such names.
+
+traditional c practice is to use UPPER CASE as symbolic constants and LOWER CASE as variable names.
+
+it's wise to choose variable names that are related to the purpose of the variable that are unlikely to get mixed up typographical.
+
+### Data Types and Sizes
+`char` a single byte, capable holding one character in the local character set.
+
+`int` integer, typically reflecting the natural size of integers on the host machine
+
+`float` single-precision floating point
+
+`double` double-precision floating point
+
+there are `qualifiers` that can be applied to basic types: 
+
+`short` and `long` can be applied to `int` types:
+
+`short int sh` shorted as `short sh`
+
+`long int l` shorted as `long l`
+
+`short` and `long` should provide different length of integers.
+
+ `int` will be the natural size of a particular machine can provide, each compiler is free to choose appropriate size for it's hardware.
+
+`signed` or `unsigned` qualifiers can be applied to char or integer.
+
+`unsigned` character are always positive or zero, and obeys rules of arithmetic modulo `2^n`,while `signed` character have value between `-2^n/2` to `2^n/2`,
+
+but whether a plain character is `signed` or `unsigned` character is up to the machine.
+
+###  constants
+#### Data Types Examples:
+`int/decimal` : 1234, if an integer is too big, usually will be taken as long
+
+`long`: 1234l or 1234L
+
+`unsigned long`: 1234ul or 1234UL
+
+`double`: 123.4 or 1e-2
+
+`float`: 123.4f or 123.4F
+
+`long double`: 123.4l or 123.4L
+
+`octal`(八进制): 034
+
+`hexadecimal`(十六进制): 0x23/0X23
+
+#### character constants
+character constant is an integer, such as 'x',for example, in the ASII character set, the characer set `0` has the value 48.
+
+characer constants participate in numeric operations just as integers, also they often used in characer comparisons.
+
+
+certain characer can be represented in character or string constant by escape sequences such as:`\n`,it looks like two characters, but represent only one.
+
+the character constant `\0` represent the character with value 0, the `null` character.
+
+#### string constants
+string constants or string literals are characters surrounded by double quotes.those quotes are not part of strings, just serve only to delimit(划定界限) it.
+
+technically, a string constant is an array of characters. the internal representation of string has a null character '\0' at the end. 
+
+
+
+
+
+
+
+
+
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
