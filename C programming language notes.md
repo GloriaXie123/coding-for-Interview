@@ -198,8 +198,25 @@ string constants or string literals are characters surrounded by double quotes.t
 
 technically, a string constant is an array of characters. the internal representation of string has a null character '\0' at the end. 
 
+#### enumeration constant
+enumeration is a list of constant integer values, as in `enum boolean {YES, NO}`,
 
+the first name in enum has value 0 and the second has the value 1, unless explicitly assigned.
 
+names in enumerations must be distinct, values in the same enumration don't have to be the same.
+
+#### Declarations
+All variables can be declared before use. A declaration specifies a type and contains a list of variables of that type.
+
+A variable can be initialized in a declaration. if a name is follwed by a equal sign and an expression, the expression serve as an initializer.
+
+External and static variables are initialized to zero by default.
+
+Automatic variables which are not explicitly initialized have undefined value(garbage).
+
+the qualifier `const` can be applied to any variable to specify that it's value will not be changed.
+
+#### Type Conversions
 
 
 
