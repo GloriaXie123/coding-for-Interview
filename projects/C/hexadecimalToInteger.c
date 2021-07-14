@@ -6,9 +6,9 @@ the allowable digits are 0 through 9,a through f and A through F*/
 #define hexbase 16
 #define YES 1
 #define NO 0
-int htoi(char s[]);
+int htoi(char s[], int len);
 int powerf(int base, int i);
-main()
+void main()
 {
 	int c, i;
 	char s[LIMIT];
@@ -16,27 +16,21 @@ main()
 	{
 		s[i] = c;
 	}
-	printf("corresponding decimal is: %d\n", htoi(s));
+	int arraylen = i;
+	printf("corresponding decimal is: %d\n", htoi(s, arraylen));
 	s[i] = '\0';
 	printf("original input is: %s\n", s);
 }
 
-int htoi(char s[])
+int htoi(char s[], int len)
 {
-	int inhex, hexdigit, n, power;
-	int i = 0;
-	if (s[i] == '0')
-	{
-		++i;
-		if (s[i] == 'X' || s[i] == 'x')
-		{
-			++i;
-		}
-	}
-
+	int hexdigit, n, i, j;
+	i = len - 1;
+	j = 0;
 	n = 0;
-	int num = i;
-	for (; inhex == YES; ++i)
+	hexdigit = 0;
+
+	while (i >= 0)
 	{
 		if (s[i] >= '0' && s[i] <= '9')
 		{
@@ -50,11 +44,14 @@ int htoi(char s[])
 		{
 			hexdigit = s[i] - 'A' + 10;
 		}
-		else
+
+		if (s[i] == 'x' || s[i] == 'X')
 		{
-			inhex == NO;
+			break;
 		}
-		n = n + hexdigit * powerf(hexbase, i - num);
+		n = n + hexdigit * powerf(hexbase, j);
+		--i;
+		++j;
 	}
 	return n;
 }
