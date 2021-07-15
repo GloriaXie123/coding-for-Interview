@@ -129,7 +129,7 @@ it's also possible to define variables that is external to all functions,which c
 the external variable must be declared once outside of the function,this set storage for it.
 
 ## Chapter 2 Types, Operations and Expressions
-### Variable Names
+### 2.1 Variable Names
 Names are made up of letters and digits. the first character must be a letter.
 
 even though underscore "_" counts as a letter,but don't begin variable name with underscore "_",since library routines often use such names.
@@ -138,7 +138,7 @@ traditional c practice is to use UPPER CASE as symbolic constants and LOWER CASE
 
 it's wise to choose variable names that are related to the purpose of the variable that are unlikely to get mixed up typographical.
 
-### Data Types and Sizes
+### 2.2 Data Types and Sizes
 `char` a single byte, capable holding one character in the local character set.
 
 `int` integer, typically reflecting the natural size of integers on the host machine
@@ -165,7 +165,7 @@ there are `qualifiers` that can be applied to basic types:
 
 but whether a plain character is `signed` or `unsigned` character is up to the machine.
 
-###  constants
+###  2.3 constants
 #### Data Types Examples:
 `int/decimal` : 1234, if an integer is too big, usually will be taken as long
 
@@ -216,7 +216,62 @@ Automatic variables which are not explicitly initialized have undefined value(ga
 
 the qualifier `const` can be applied to any variable to specify that it's value will not be changed.
 
-#### Type Conversions
+#### 2.8 Increment and Decrement Operators
+increment operator adds 1 to its operand while the decrement operator subtracts 1 from the operand.
+
+the following code snippet can be more compact by using increment operator:
+```
+if(c == '\n'){
+  s[i] = c;
+  ++i;
+}
+```
+can be rewritten as:
+```
+if(c == '\n'){
+  s[i++] = c;
+}
+```
+### 2.9 Bitwise Operators
+C provides six operators for bit manipulation,these may only be applied to integral operands,
+
+which is signed or unsigned short, long, int , char.
+
+the bitwise AND(&) operator is often used to mask off some bits,the bitwise OR(|) operator is used to turn bits on:
+
+`x & 1 -> x for any value of x`
+
+`x & 0 -> 0 for any value of x`
+
+the bitwise exclusive OR(^) operator sets a one if its operands have different bits.
+
+one must distingush the bitwise operators & and | with logical operators && and || which implies to left-to-right evaluation of truth.
+
+for example:`x & y` is zero while `x && y` is one.
+
+the shift operators << and >> perform left and right shifts of their left oprand by the number of bit positions given by the right oprand,which must be non-negative.
+
+the unary operator ~ yields the one's complement of an integer.
+
+### 2.10 Assignment operators and Expressions
+most binary operators have corresponding operator `op=`, where op is one of
+
+`+ - * / % << >> & ^ |`
+
+expression `expr1 = (expr1) + (expr2)` can be rewritten as `expr1 op= (expr2)`.
+
+in the second expression, the expr1 is only computed once.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
