@@ -118,6 +118,8 @@ The story is different for arrays,when the name of an array is used as an argume
 ### 1.9 Character Arrays
 #### '\0'
 in C language,'\0' (null character,whose value is 0)is the signal of the end of the string of characters.
+#### Get Length Of Character Array
+function strlen() will return the length of character array, excluding '\0'.
 
 ### 1.10 external variables
 #### local or automatic variables
@@ -311,27 +313,6 @@ compilers can intepret in different ways.
 therefore such situation should be avoided.
 
 the moral is that writting code that depends on **order of evaluation** is a bad programming practice in any language.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## Chapter 5 Pointers and Arrays
 
