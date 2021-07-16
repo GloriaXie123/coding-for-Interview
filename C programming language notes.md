@@ -262,6 +262,60 @@ expression `expr1 = (expr1) + (expr2)` can be rewritten as `expr1 op= (expr2)`.
 
 in the second expression, the expr1 is only computed once.
 
+in expression `x >>= 1`, declare x to be unsigned to ensure that when it't right-shifted, vacated bits will be filled with zeros intead of sign bits.
+
+because unsigned type always hold positve value.
+
+#### Assignment in an expression
+the example of assignment in an expression is like:
+
+`while( (c = getchar()) != EOF)`
+
+in the above code line, the type of the assignment expression is the type of its left operand, and the value is the value after assignment.
+
+### 2.11 Conditional Expression
+the statements
+
+```
+if(a > b){
+  z = a;
+}
+else
+{
+  z = b;
+}
+```
+
+compute in z the maximum of a and b.
+
+
+this can be rewritten with conditional expression and ternary operator.
+
+`expr1 ? expr2: expr3`
+
+in this case, the above code can be rewritten as `z = (a > b) ? a : b`
+
+if expr2 and expr3 are different types, for example: `n > 0 ? f : n`, n is integer.
+
+according to the conversion rule, n will finally be float type no matter n is positive or negative.
+
+### 2.12 Precedence and Order of Evaluation
+in the code line
+
+`a[i] = i++`
+
+which makes us confused is that whether the i is the old value or new.
+
+compilers can intepret in different ways.
+
+therefore such situation should be avoided.
+
+the moral is that writting code that depends on **order of evaluation** is a bad programming practice in any language.
+
+
+
+
+
 
 
 
