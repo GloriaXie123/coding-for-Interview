@@ -314,6 +314,15 @@ therefore such situation should be avoided.
 
 the moral is that writting code that depends on **order of evaluation** is a bad programming practice in any language.
 
+## Chapter 3 Control FLow
+### 3.1 Statements and Blocks
+In C, the semicolon is the statement terminator.
+
+Braces { and } are used to group declarations and statements together into a compound statement or block so that they are syntatically equivalent to a single statement.
+
+### 3.2 If-Else
+
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
