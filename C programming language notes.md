@@ -320,7 +320,10 @@ In C, the semicolon is the statement terminator.
 
 Braces { and } are used to group declarations and statements together into a compound statement or block so that they are syntatically equivalent to a single statement.
 
-### 3.2 If-Else
+### 3.4 Switch
+switch statement is a multi-way decision, as a matter of good form,put a break after the last case(the default here) is logically unnecessary, some day when another case gets added at the end, the defensive programming will save you.
+
+### 3.5 Loops - While and For
 
 
 ## Chapter 5 Pointers and Arrays
