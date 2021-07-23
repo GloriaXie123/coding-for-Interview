@@ -324,7 +324,30 @@ Braces { and } are used to group declarations and statements together into a com
 switch statement is a multi-way decision, as a matter of good form,put a break after the last case(the default here) is logically unnecessary, some day when another case gets added at the end, the defensive programming will save you.
 
 ### 3.5 Loops - While and For
+comma is the operator in C with the least preference which most often finds use in the `for` statement.
+```
+for example:
+#include <stdio.h>
+/*reverse:reverse string s in place*/
+main(){
+  int c, i, j;
+  for(i = 0, j = strlen(s) - 1; i < j; ++i,--j){
+    c = s[i];
+    s[i] = s[j];
+    s[j] = c; 
+  }
+}
+```
+or
 
+```
+  for(i = 0, j = strlen(s) - 1; i < j; ++i,--j){
+    c = s[i], s[i] = s[j], s[j] = c; 
+  }
+```
+
+### 3.6 Loops-Do-While
+Do-While is used much less than While and For clause, but it sometimes it's much useful which guarantees at lest statements are executed at least once.
 
 ## Chapter 5 Pointers and Arrays
 
