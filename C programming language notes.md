@@ -349,6 +349,15 @@ or
 ### 3.6 Loops-Do-While
 Do-While is used much less than While and For clause, but it sometimes it's much useful which guarantees at lest statements are executed at least once.
 
+### 3.7 Break and Continue
+The `break` enables an earlier exit from the `while`, `for` and `do`,just the same as `switch`.
+the `continue` causes next iteratation of inner loop `while`,`for` and `do`,just skips the execution statements, it doesn't work with  `switch`.
+
+### 3.8 Go to and Labels
+`go to ` and `label` should be used rarely, code with `go to` is harder to understand and mantain.
+
+## Chapter 4 Functions and Program Structures
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
