@@ -3,6 +3,7 @@
 well,all i need is vim in Visual Studio Code as Editor and gcc,it's easily to set up on linux.<br>
 **suplementary resource**:<br>
 *blog post about vim operations: https://www.barbarianmeetscoding.com/blog/boost-your-coding-fu-with-vscode-and-vim#fn-latest-vscode*
+*complementary materials of K&R 2nd version:https://www.eskimo.com/~scs/cclass/krnotes/top.html*
 ## Chapter 1<br>
 ### 1.1 Getting Started<br>
 #### compile code and run executables<br>
@@ -357,6 +358,7 @@ the `continue` causes next iteratation of inner loop `while`,`for` and `do`,just
 `go to ` and `label` should be used rarely, code with `go to` is harder to understand and mantain.
 
 ## Chapter 4 Functions and Program Structures
+
 
 ## Chapter 5 Pointers and Arrays
 
