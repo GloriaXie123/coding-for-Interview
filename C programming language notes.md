@@ -358,6 +358,17 @@ the `continue` causes next iteratation of inner loop `while`,`for` and `do`,just
 `go to ` and `label` should be used rarely, code with `go to` is harder to understand and mantain.
 
 ## Chapter 4 Functions and Program Structures
+Functions break large computing tasks into smaller ones and enable people to build on what others have done, instead of starting over from scratch again.
+### 4.1 Basics of Functions
+A minimal function is like:
+
+`dummy(){}`
+
+which does nothing and returns nothing, a do-nothing function is sometimes useful as a **place-holder** during program development. if the return type is ommitted, int is assumed.
+
+a program is just a set of definitions of variables and functions, Communications between the functions is by arguments and values returned by the functions, and through external variables.
+
+### 4.2 Functions Returning non-integers
 
 
 ## Chapter 5 Pointers and Arrays
