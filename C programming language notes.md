@@ -369,7 +369,12 @@ which does nothing and returns nothing, a do-nothing function is sometimes usefu
 a program is just a set of definitions of variables and functions, Communications between the functions is by arguments and values returned by the functions, and through external variables.
 
 ### 4.2 Functions Returning non-integers
+if a name that has not been declared before occurs in an expression and is followed by a left parentheses.it's declared by context to be a function name,
+the function is assumed to return an int and nothing is assumed about its arguments.
 
+`%g` and `%G` is the simplifiers of %e and %E which is the **scientific notation folat**.
+
+### 4.3 External Variables
 
 ## Chapter 5 Pointers and Arrays
 
