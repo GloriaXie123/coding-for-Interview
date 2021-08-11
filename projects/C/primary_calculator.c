@@ -59,6 +59,7 @@ void main()
 
 int sp = 0;
 double stack[MAXVAL];
+
 double pop()
 {
 	if (sp > 0)
@@ -120,9 +121,7 @@ int getnext(char s[])
 }
 
 #define BUFSIZE 100
-
 char buf[BUFSIZE];
-
 int bufp = 0;
 
 int getch(void)
