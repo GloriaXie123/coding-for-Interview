@@ -470,6 +470,31 @@ the function is assumed to return an int and nothing is assumed about its argume
 
 ### 4.3 Scope Rules
 
+The _scope of a name_ is the part of the program within which the name can be used.
+
+The scope of an external variable or a function lasts from the point at which it's declared to the end of the file being compiled.
+
+If an external variable is to be referred before it's defined, or it's being used in a different file from the one where it's defined, then an _extern declaration_ is mandatory.
+
+It's import to distinguish _declarition of external variable_ and it's _definition_:
+
+A declarition announces properties of variable(primarily type) and a definition also causes storage to be set aside. and initialization of an external variable only goes with definition.
+`extern int a;`
+
+`extern char s[];`
+
+`int a = 0;`
+
+`char s[MAXVAL];`
+
+### Header Files
+
+In realistic program we might put different part of a bigger program into different source files.
+
+declarations and definitions are shared among files, and we want to centralize it and keep only one copy as the program evolves.
+
+so we will put declarations and definitions into header file: _`cacl.h`_.
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
