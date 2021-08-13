@@ -495,6 +495,82 @@ declarations and definitions are shared among files, and we want to centralize i
 
 so we will put declarations and definitions into header file: _`cacl.h`_.
 
+### Static Variables
+
+The `static declaration` applied to an external variable or function, limits the scope of that object to the rest of the source file being compiled.
+
+With the `static declaration`, other files can use the same variable name and won't conflict with the ones in this file.
+
+The `static keyword` can also be applied to function to limit it's scope to current file.
+
+When `static keyword` is applied to internal variables, it's only avilable within the function, however it's storage is permanent.
+
+### Register Variables
+
+A register declaration advise the compiler that the variable will be heavily used.
+
+The idea is that register variables is going to be placed in the machine registers.
+
+The register declaration can only be applied to automatic variables and function parameters.
+
+And only limited number of variables and specific type can be declared as register variables which varies machine by machine.
+
+### Block Structure
+
+In C, it's not allowed to define function inside a function.
+
+As a matter of style, it's best to avoid variable names that conceal names in an outer scope. the potential for confusion and error is great.
+
+### Initialization
+
+External and static variables are guaranteed to be initialized to zero without explicit initialization. automatic and register variables have undefined initial values(maybe garbage).
+
+for external and static variables the initializer must be constant expression and can only be initialized once.
+
+instead, automatic and register variables can be initialized multiple times with any expression.
+
+it's better code style to seperate declaration of automatic variables and it's initialization.
+
+for example:
+
+```
+int i, c;
+
+i = 0;
+
+c = 0;
+```
+
+array initialization can be done by this way:
+
+```
+int days[] = {31,30,31,30......}
+```
+
+for missing initialization of array element, it will defaultly be zero for external, static and automatic type.
+
+character array is a special case of initialization:
+
+```
+char pattern = "ould";
+```
+
+is equivalent to:
+
+```
+char pattern[] = {'o','u','l','d','\0'};
+```
+
+the length of the above char array should be 5.
+
+### Recursion
+
+when a function calls itself, each invocation get a fresh set of automatic variables, indepent of the previous set.
+
+A good example of recursion is quick sort.
+
+recursion may provide no saving in storage, because somewhere a stack of values being processed must be maintained, nor will it be faster, but somehow recursion code is more compact and easier to read.
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
