@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define MAXVAL 10;
+#define MAXVAL 10
 
 /*convert number to string by using recursion*/
 void itoa(int);

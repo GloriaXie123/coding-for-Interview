@@ -1,29 +1,29 @@
 #include <stdio.h>
-#include <string.h>
 
-#define MAXVAL 100
+#define MAX 100
+
 /*write a function reverse(s) that reverses the character string s,
 use it to write a program to reverses its input a line at a time*/
-int getlines(char[], int MAXVAL);
+int getinputline(char[], int limit);
 void reverse(char[], int low, int high);
 void swap(char *s, int a, int b);
 
-main()
+void main()
 {
 	int len;
-	char line[MAXVAL];
-	if (len = getlines(line) > 0)
+	char line[MAX];
+	if ((len = getinputline(line, len - 1)) > 0)
 	{
 		reverse(line, 0, len - 1);
-		printf("%s", s);
+		printf("%s", line);
 	}
 }
 
-int getlines(char line[], MAXVAL)
+int getinputline(char line[], int limit)
 {
 	int i, c;
 	i = 0;
-	while ((c = getchar()) != EOF && c != '\n' && i < MAXVAL - 1)
+	while ((c = getchar()) != EOF && c != '\n' && i < MAX - 1)
 	{
 		line[i] = c;
 		++i;
@@ -46,7 +46,7 @@ void reverse(char line[], int low, int high)
 
 	while (i < j)
 	{
-		reverse(++i, --j);
+		reverse(line, ++i, --j);
 	}
 
 	swap(line, line[--i], line[++j]);

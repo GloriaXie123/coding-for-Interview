@@ -571,6 +571,46 @@ A good example of recursion is quick sort.
 
 recursion may provide no saving in storage, because somewhere a stack of values being processed must be maintained, nor will it be faster, but somehow recursion code is more compact and easier to read.
 
+## 4.11 The C Preprocessor
+
+C preprocessor is conceptionally a seperate first step of compilation.
+
+features are:
+
+#include, to include the contents of file in compilation.
+
+#define, to replace a token by an arbitrary sequence of strings.
+
+others: conditional compilation and macros with arguments.
+
+### File Inclusion
+
+File inclusion makes it easier to handle collections of #defines and declarations.
+
+#include "filename"
+
+or
+
+#include <filename>
+
+will be replaced by the contents of the file to be included. if the filename is quoted, searching for the file typically begins where the source program was found, if the name is encluded in < and >, searching follows an implementation-defined rule to find the file.
+
+naturally, when an included file has changed, all files depend on it must recompiled.
+
+### Macro substitution
+
+```
+#define name replacement text
+```
+
+it calls for the macro substitution of the simplest kind. subsequent
+
+occurrences of token name will be replaced by the replacement text.
+
+if a parameter name is preceded with #, the combination will be expanded into a quoted string.
+
+### Conditional Inclusion
+
 ## Chapter 5 Pointers and Arrays
 
 A pointer is a variable that contains the address of a variable, pointer is much used in C,partly because they are sometimes the only way to express the computation, and partly because they usually lead to more compact and efficient code.
