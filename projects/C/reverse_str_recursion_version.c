@@ -12,7 +12,7 @@ void main()
 {
 	int len;
 	char line[MAX];
-	if ((len = getinputline(line, len - 1)) > 0)
+	if ((len = getinputline(line, MAX)) > 0)
 	{
 		reverse(line, 0, len - 1);
 		printf("%s", line);
@@ -42,20 +42,22 @@ void reverse(char line[], int low, int high)
 {
 	int i, j;
 	i = low;
-	j = high;
+	j = (line[high] == '\n') ? --high : high;
 
 	while (i < j)
 	{
 		reverse(line, ++i, --j);
 	}
 
-	swap(line, line[--i], line[++j]);
+	swap(line, i, j);
 }
 
 void swap(char *s, int a, int b)
 {
 	char temp;
-	temp = *(s + a);
-	*(s + a) = *(s + b);
-	*(s + b) = temp;
+	temp = *(s + b);
+	*(s + b) = *(s + a);
+	printf("%s", s);
+	*(s + a) = temp;
+	printf("%s", s);
 }

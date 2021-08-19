@@ -609,7 +609,15 @@ occurrences of token name will be replaced by the replacement text.
 
 if a parameter name is preceded with #, the combination will be expanded into a quoted string.
 
-### Conditional Inclusion
+### Conditional inclusion
+
+It's possible to control preprocessing itself with conditional statements that
+
+are evaluated during preprocessing.
+
+The #if line evaluates a constant integer expression, if the expression is
+
+non-zero, subsequent lines until an #endif or #elif or #else is included.
 
 ## Chapter 5 Pointers and Arrays
 
