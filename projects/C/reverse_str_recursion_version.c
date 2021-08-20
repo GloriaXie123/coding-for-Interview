@@ -40,16 +40,19 @@ int getinputline(char line[], int limit)
 
 void reverse(char line[], int low, int high)
 {
+	if (low >= high)
+	{
+		return;
+	}
 	int i, j;
 	i = low;
 	j = (line[high] == '\n') ? --high : high;
 
 	while (i < j)
 	{
+		swap(line, i, j);
 		reverse(line, ++i, --j);
 	}
-
-	swap(line, i, j);
 }
 
 void swap(char *s, int a, int b)
@@ -57,7 +60,5 @@ void swap(char *s, int a, int b)
 	char temp;
 	temp = *(s + b);
 	*(s + b) = *(s + a);
-	printf("%s", s);
 	*(s + a) = temp;
-	printf("%s", s);
 }
