@@ -73,6 +73,7 @@ void echo_quote(int c)
 	while ((d = getchar()) != c)
 	{
 		putchar(d);
+		printf("%d", d);
 		if (d == '\\') /*search for end*/
 		{
 			putchar(getchar()); /*ignore escape seq*/
