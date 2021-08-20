@@ -7,7 +7,7 @@ double atof(char s[])
 	int i, sign;
 	double val, power;
 	for (i = 0; isspace(s[i]); ++i)
-		;
+		continue;
 
 	sign = (s[i] == '-') ? -1 : 1;
 
