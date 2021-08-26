@@ -25,5 +25,3 @@ int binarysearch(int x, int v[], int n)
 	}
 	return -1;
 }
-
-
