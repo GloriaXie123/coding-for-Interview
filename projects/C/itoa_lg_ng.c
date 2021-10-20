@@ -9,7 +9,6 @@ number for specific bits is: -2^(n-1) ~ 2^(n-1)-1*/
 void itoa(char s[], int n)
 {
 	int sign, i;
-
 	i = 0;
 	do
 	{
