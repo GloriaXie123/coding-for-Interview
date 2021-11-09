@@ -116,8 +116,9 @@ int getnext(char s[])
 	if (c != EOF)
 	{
 		ungetch(c);
+		return NUM;
 	}
-	return NUM;
+	return c;
 }
 
 #define BUFSIZE 100

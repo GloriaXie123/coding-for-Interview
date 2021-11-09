@@ -597,7 +597,7 @@ will be replaced by the contents of the file to be included. if the filename is 
 
 naturally, when an included file has changed, all files depend on it must recompiled.
 
-### Macro substitution
+### Macro Substitution
 
 ```
 #define name replacement text
@@ -629,4 +629,34 @@ a typical machine has an array of consecutively numbered or addressed memory cel
 
 any byte can be a char, a pair of one-byte cells can be a short, and four adjacent bytes form a long,
 
-a pointer is a group of cells that can hold an address.
+a pointer is a group of cells(usually two or four) that can hold an address.
+
+`p = &c`
+
+assigns the address of c to the variable p, the & operator only applies to variables in memory: variables and array elements. it cannot be applied to constants, expressions or register variables.
+
+`int *ip`
+
+in the above expression, `*ip` is a pointer to int.
+
+if `iq and ip` are both pointers.
+
+`iq = ip`
+
+makes `iq` points to the object `ip` points to.
+
+### pointers and function arguments
+
+since in c, functions pass arguments by value, so `swap(a,b)` function can't do the job by set a,b as `int` type, instead setting a,b as `pointers` solves the problem.
+
+### Pointers and Arrays
+
+In C, there is strong relationship between pointers and arrays. any operation that can be achieved by array subscripting can also be done with array pointers. they share the same implementation.
+
+### Address Arithmetic
+
+`p += i` increments it to point i elements beyond where it currently does.
+
+C guarantees that **zero** is never a valid address for data.
+
+Any pointer can be meaningfully compared for equality or inequality with zero.
