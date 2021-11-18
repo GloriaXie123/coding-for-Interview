@@ -660,3 +660,21 @@ In C, there is strong relationship between pointers and arrays. any operation th
 C guarantees that **zero** is never a valid address for data.
 
 Any pointer can be meaningfully compared for equality or inequality with zero.
+
+### Character Pointers and Functions
+
+There is important difference between these definitions:
+
+`char amessage[] = "now is the time" /*this is an array*/`
+
+`char *pmessage = "now is the time" /*this is a pointer*/`
+
+amessage is an array of storage which big enough to hold any character array that initializes it.
+
+while pmessage is just a pointer that points to a string constant.
+
+the combination of \* and --,++ are idiom of C language, such as:
+
+`*--p` decrements p before fetching the value p points to.
+
+
