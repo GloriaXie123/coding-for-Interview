@@ -677,4 +677,10 @@ the combination of \* and --,++ are idiom of C language, such as:
 
 `*--p` decrements p before fetching the value p points to.
 
+### Pointer Arrays and Pointer to Pointers
 
+`char *lineptr[MAXLINES]`
+
+the declaration is an array of pointers, each pointer points to a char,
+
+the char is the first element of i-th text line.
