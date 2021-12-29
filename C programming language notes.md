@@ -684,3 +684,44 @@ the combination of \* and --,++ are idiom of C language, such as:
 the declaration is an array of pointers, each pointer points to a char,
 
 the char is the first element of i-th text line.
+
+### Multi-dimensional Arrays
+
+Two dimensional arrays:
+
+`detab[i][j]`
+
+funtional parameters declaration of two dimensional arrays:
+
+`f(int detab[i][j]), f(int detab[][j]),f(int (*detab)[j])`
+
+### Initialization of Pointer Arrays
+
+```
+*month_name[] = {
+"January",
+"Feburary",
+"March",
+"April",
+"May",
+...,
+"December"
+}
+```
+
+in the above initialization statements,month_name is an array of character pointers, month_name[i] is the i-th pointer that points to the i-th months's name string.
+
+### Pointers vs Multi-dimensional Arrays
+
+`int a[2][3]` is totally different from `*a[2]`, because the array length of pointers pointing to is undefined.
+
+### Command-line Arguments
+
+argv is the vector of parameters, by convention, the argv[0] is the name of the program, argv[argc]
+
+is the null pointer.
+
+#### The format paramter of printf
+
+`printf((argc > 1)? "%s ": "%s",*++argv);` the format parameter of printf can be an expression.
+
