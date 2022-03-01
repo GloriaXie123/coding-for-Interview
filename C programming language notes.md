@@ -725,3 +725,460 @@ is the null pointer.
 
 `printf((argc > 1)? "%s ": "%s",*++argv);` the format parameter of printf can be an expression.
 
+### Pointers to Functions
+
+A sort often consists of three parts, a comparison that determines ordering of any pair of objects,
+
+an exchange that reverses their order and a sorting algorithm that makes comparisons and exchanges that makes all the objects in order.
+the sorting algorithm is independent of comparison and exchange operations, so by passing different comparison and exchange functions,
+
+#### Function Pointer Syntax
+
+The syntax for declaring a function pointer might seem messy at first, but it's really quite
+
+straight-forward once you understand what's going on:
+
+`void (*foo)(int);`
+
+in this example, foo is a pointer to a function taking one argument.
+
+similarly, int *x can be read as *x is an int, so x must be a pointer to an int.
+
+somtimes people get confused when more stars(\*) are thrown in:
+
+`void *(*foo)(int *)`
+
+`*foo` refers to a function that takes `int *` as argument and returns a `void *`
+
+#### Callback
+
+Callback is a piece of executable code passed to functions. In C, callbacks are implemented by passing function pointers.
+
+qsort() function from standard library can sort array of any datatypes, how does it do that? callback.
+
+### Complicated Declarations
+
+C is sometimes castigated for the syntax of its declarations, particular ones that involve pointers to functions,
+
+because parentheses are overused, the following example explains the difference.
+
+```
+int *foo(); /*function returning pointer to int*/
+
+and
+
+int (*foo)(); /*pointer to function returning int*/
+
+```
+
+## Struct
+
+### Structure
+
+A Structure is a collection of related variables grouped together under a single name.
+
+This is an example of composition-building complex structures out of simple ones.
+
+```
+struct point{
+  int x;
+  int y;
+};
+```
+
+The `point` here is called the structure tag.
+
+structures help to organize complicated data, particularly in large programs, because they
+
+permit a group of related variables to be treated as a unit instead of as seperate entities.
+
+The main change made by ANSI standard is to define structure assignment - structures may be copied
+
+and assigned to, passed to functions and returned by functions.
+
+#### Basics of Structures
+
+The variables named in a structure are called members.
+
+`struct {...} x,y,z` is syntactically analogous to `int x, y,z`, this statement declares x,y,z as the
+
+named type and causes space set aside for them.
+
+`struct point maxpt = {320,180};` a structure can be initialized by following its definition with a
+
+list of initializers, each a constant expression, for the member.
+
+#### Structures and Functions
+
+Structure pointers are just like pointers to ordinary variables. The declaration:
+
+`struct point *pp, origin;`
+
+`pp = &origin;`
+
+Pointers to structures are so frequently used that an altenative notation is provided as a shorthand,
+
+if p is a pointer to a structure, then
+
+`p -> member of the structure`
+
+#### Arrays of Structures
+
+```
+struct key {
+  char *word;
+  int count;
+} keytab[NKEYS];
+
+struct key{
+  char *word;
+  int counts;
+}
+struct key keytab[NKEYS];
+```
+
+the above declarations are equivalent.
+
+#### Pointers to Structures
+
+`struct key *binsearch(); /*This is a funtion declaration that return a pointer to structure*/`
+
+#### Self-referential Structures
+
+```
+struct tnode{
+  char *word;
+  int count;
+  struct tnode *left;
+  struct tnode *right;
+}
+```
+
+it's illegal for a structure to contain an instance of itself, but
+
+`struct tnode *left`
+
+declares left to be a pointer to tnode not tnode itself.
+
+#### Typedef
+
+`typedef int Length` makes the name Length a synonym for int.
+
+The type Length can be used in declarations, casts, etc,. in exactly
+
+the same ways that the types int can be:
+
+`Length len,maxlen;`
+
+`Length *lengths[];`
+
+Syntactically,typedef is like the storage classes `extern, static`, etc.
+
+We have used capitalized names for typedefs, to make them stand out.
+
+Storage class are used to describe the features of a variable,
+
+These features basically include the scope, visibility and life-time
+
+which help us to trace the existence of a particular variable during the
+
+runtime of a progam.
+
+typedef is like `#define`, except that since it is interpreted by
+
+the compiler, it can cope with textual substitutions that are beyond
+
+the capabilities of the preprocessor.
+
+there are two main reasons for using typedefs, The first is to
+
+parameterize a program against portability problems. if typedefs are used
+
+for data types that may be machine-dependent, only the typedefs need
+
+change when the program is moved.
+
+The second purpose of typedefs is to provide better documentation for a
+
+program- a type called Treeptr may be easier to understand than one
+
+declared only as a pointer to a complicated structure.
+
+#### Unions
+
+Unions provide a way to manipulate different kinds of data in a single
+
+area of storage, without embedding any machine-dependent information
+
+in the program.
+
+The memory occupied by a union will be large enough to hold the largest
+
+member of the union.
+
+#### Bit Fields
+
+Bit-field is a set of adjacent bits within a single implementation-defined
+
+storage unit that we will call a "word".
+
+Fields behave like small integers, and may participate in arithmetic
+
+expressions just like other integers.
+
+## Chapter 7 Input and Output
+
+### Standard Input and Output
+
+In many environments, a file may be substituted for the convention to the keyboard by using
+
+the < convention for input redirection.
+
+if a program prog use getchar, then the command line
+
+```
+prog <infile
+```
+
+cause prog to read characters from infile instead.
+
+Input switching is also invisible, if the input comes from another program via a pipe mechanism.
+
+on some systems, the following command line
+
+```
+otherprog | prog
+```
+
+runs two programs, and pipes the standard output of otherprog into the standard input of prog.
+
+putchar(c) put the character c on the standard output, which is by default the screen.
+
+Each source file that contains the input and output library function must contain the line:
+
+```
+include <stdio.h>
+```
+
+before the first reference.
+
+### Formatted Output-Printf
+
+printf converts, formats and prints its arguments on the standard output under control of
+
+the format, it returns number of characters printed.
+
+### Variable-length Argument Lists
+
+### Formatted Input Scanf
+
+The function scanf is the input analog of printf, providing many of the same conversion facilities in the opposite direction.
+
+### File Access
+
+cat concatenates a set of named files onto the standard output.
+
+cat is used for printing files on the screen.
+
+file pointer, points to a structure that contains information about the
+
+file, such as the location of a buffer, the current character position in
+
+the buffer, whether the file is being read or written, and whether errors
+
+or end of file have occurred.
+
+### Error Handling -- Stderr and Exit
+
+Output written on stderr normally appears on the screen even if the
+
+standard output is redirected.
+
+### Line Input and Output
+
+### Miscellaneous Functions
+
+#### String Operations
+
+#### Character Class Testing and Conversion
+
+#### Ungetc
+
+#### Command Execution
+
+The function system(char \*s) executes the command contained in the
+
+character string s, then resumes execution of the current program.
+
+#### Storage Management
+
+The functions malloc and calloc obtain blocks of memory dynamically.
+
+`void *malloc(size_t n)`
+
+returns a pointer to n bytes of uninitialized storage, or NULL if the
+
+the request can not be satisfied.
+
+`void *calloc(size_t n, size_t size)`
+
+returns a pointer to enough space for an array of n objects of the
+
+specified size or NULL if the request cannot be satisfied. The storage
+
+is initialized to zero.
+
+The pointer returned by malloc or calloc has the proper alignment for
+
+the object in question, but it must be cast into the appropriate type.
+
+#### Mathematical Functions
+
+#### Random Number Generation
+
+## Chapter 8 The UNIX System Interface
+
+The UNIX operating system provides its services through a set of `system
+
+calls`, which are in effect functions within the operating system that
+
+may be called by user programs.
+
+#### File Descriptors
+
+In the UNIX operating system, all input and output is done by reading or
+
+writting files, because all peripheral devices, even keyboard and screen,
+
+are files in the file system. This means that a single homogeneous
+
+interface handles all communication between a program and peripheral
+
+devices.
+
+Since input and output involving keyboard and screen is so common,
+
+special arrangements exist to make this convenient. When the command
+
+interpreter runs a program. three files are open, with file descriptors
+
+0,1, and 2, called the standard input, the standard output, and the
+
+standard error. If a program reads 0 and writes 1 and 2, it can do input
+
+and output without worring about opening files.
+
+#### Low Level I/O--Read and Write
+
+Input and output uses the read and write system calls, which are accessed
+
+from C programs through two functions called read and write.
+
+For both, the first argument is a file descriptor.
+
+The second argument is a character array in your program where the data
+
+is to go to or come from.
+
+The third argument is the number of bytes to be transferred.
+
+Putting thest facts together, we can write a simple program to copy its
+
+input to its output, the equivalent of the file copying program written
+
+for Chapter 1. The program will copy anything to anything, since the
+
+input and output can be redirected to any file or device.
+
+```
+#include "syscalls.h"
+
+main() /*copy input to output*/
+{
+  char buf[BUFSIZE];
+  int n;
+
+  while((n = read(0, buf, BUFSIZ)) > 0)
+    write(1, buf, n);
+
+  return 0;
+}
+```
+
+we have collected function prototypes for the system calls into a file
+
+called syscalls.h so we can include it in the programs of this chapter.
+
+This name is not standard, however.
+
+#### Open,Creat,Close,Unlink
+
+Other than the default standard input, output and error, you must
+
+explicitly open files in order to read or write them.
+
+There are two system calls for this, open and creat.
+
+open is rather like the fopen discussed in Chapter 7, except that
+
+instead of returning a file pointer, it returns a file descriptor,
+
+which is just an int. open returns -1 if any error occurs.
+
+#### Random Access-- Lseek
+
+Input and output are normally sequential: each read or write takes place
+
+at a position in the file right after the previous one. When necessary,
+
+however, a file can be read or written in any arbitrary order.
+
+The system call lseek provides a way to move around in a file without
+
+reading or writting any data:
+
+`long lseek(int fd, long offset, int origin);`
+
+sets the current position in the file whose descriptor is fd to offset,
+
+which is taken relative to the location specified by origin.
+
+subsequent reading or writing will begin at that position.
+
+#### Example -- An Implementation of Fopen and Getc
+
+Let us illustrate how some of these pieces fit together by showing
+
+an implementation of the standard library routines fopen and getc.
+
+names that are intended for use only by function of the library begin
+
+with an underscore so they are less likely to collide with names in
+
+the user's program.
+
+This convention is used by all standard library routines.
+
+#### Example-- Listing Directories
+
+A different kind of file system interaction is sometimes called for--
+
+determining information about a file, not what it contains.
+
+Since a UNIX directory is just a file, ls need only read it to retrieve
+
+the filenames. But it is necessary to use a system call to access other
+
+information about a file, such as its size.
+
+#### Example -- A Storage Allocator
+
+Rather than allocating from a compiled-in fixed-sized array, malloc will
+
+request space from the operating system as needed.
+
+Since other activities in the program may also request space without
+
+calling this allocator, the space that malloc manages may not be contigu-
+
+ous. Thus its free storage is kept as a list of free blocks.
